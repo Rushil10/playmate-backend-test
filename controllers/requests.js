@@ -29,6 +29,17 @@ export const joinEvent = async (req, res) => {
           },
         }
       );
+      await event.findOneAndUpdate(
+        { _id: eventId },
+        {
+          $push: {
+            joinedPlayers: playerId,
+          },
+          $inc: {
+            rem_players: -1,
+          },
+        }
+      );
       var response = {
         message: "Event Joined",
         eventId,
