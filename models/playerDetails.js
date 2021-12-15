@@ -41,7 +41,7 @@ const playerSchema = mongoose.Schema({
     default: 2,
   },
   webFcmToken: {
-    type: String,
+    type: [String],
     required: false,
   },
   phoneFcmToken: {
