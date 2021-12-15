@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "playmate-e51a6",
+  "private_key_id": "1e89a4d83ec2a3f86f02e937f3105e778d15ba57",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCuElQoyXIVpJLv\n6qXSXKlxVqgHe7wl21I/5N8KecwDJ6bPv1a36fkWYULTCnluo1OGK9XqPQpwDFtY\ntaM9r6YZmUJPDq1qzFHFvOjPkM6ZegKB2PAqhuP1ks/L9K0vKQ+euw+n2jqbjnqa\nyY4VfGlSCElHx0Xw6TXvHsTmIdx6fJeAi0tUaeUf7vC+RirDtxtICb/wBkilK5k9\nAGmyErDuacoDDmg5pxwdy2qniDruYCUx5r02tZq9O8OV1GaJyGXSvfNxqJnZRRsn\nALeWIqyL6WzxctiXUjIzCDOi9bWEGPSrR+LOkEwTUIJ1uXmuFoCRospu7zYQ0Kae\n3AQO9XVxAgMBAAECggEAKIacYNWLcbX7vo7s1aWcjkY8PufEBTVDOBxm//ecs2RV\nHftAK3e1tcvlhKAk5sjwDmXgutTEvBLoZmX9UAR3gXCwoxq57YoNhKGHOyHNs6YX\n9NaGjYQTiO4J4kQ/2KGw4QXQboXsTKB2c1h285IgLAjBVMx0QFLvK1FIyoI6JCrA\nXP5wy5hC8gZlRhR3yHRBTyp2N711PTGbWayvZkjdQB7wp1ZciVnN4OB9yBX5OvkY\nOxnCd0Osd396uevLgnMFfvKWuQK53v4KFjMndozEQusmUqygikHLP9uRgUJJE5aF\nwFxFClP/rQdYW0XivqYY06nNjoqT3YdoTEBMqo71RQKBgQDnjvXY9cPuRHReClku\nJM9xpTcopE9O13fNhwP57dp+sKuReIpPsNvcPS1DBKqkZumEuSY8dmfZ+tfCoHmq\n6H+JP6tjVf5/7DMwmJq+Wj4FVYHQhVrVm5q/tk9n1sMDU8Fqk7wRBGFoIYQ8EvJD\n8QFluUjwlkc1aXzpd3ngTe7+VQKBgQDAcf3pkAWYl3qRa3GAGOVCSFybh2abmVCC\nUmKMZjXL3keFntJedoZlS1fJtat6c5NZFKgZApwFJ0ehyOu4V3A3V3yoc6jPsvn2\nu7q7HOQsiNE8MWMcuBGsOA86WEJHC1tJsteUY0KGdH4cVlmHjJ7tSZpMEU5es/LA\nEya2TG8+rQKBgHA/a8utbzocMvC3QX3N2EV12mQ4Kj3E001tKq9H7sfFKpYNAbcZ\nu6pqeXtoUrP5My/kdLWQjE0tfNPa6L/BjrlghNtVf1ZRkIr5HuIxaqk5RwFm855i\nnMRcQufKQqRlQHhCf0MchX9t5+UbJhdrR8sg40vE/WXV6fhes1TZUoY1AoGAdvzE\nOspCu4NFVG5zQfminqXxJHTGe4SC4+Eeb6KutnucC0EU3zU3iZ/ZCq2Z9d9KBrUf\n7j7PytvrjVuWa2ccygr814aTpMALj4OpRBHr/qElhasfld01iB8tQyzY5eZeriW2\n51esBUg3xTuapZXLmfl9PnUg2Ks4d4wfzm1aBw0CgYAPi3MAl30O1EAobQRsV5vE\ng7Xhfeh8P/vJztvuH8ipvQbRwGT0+TPsWDTe7ZRT4HCfhodTLkaV1gI6+5rsfY0U\ndvSxMEOixfPEvEP8hqin9gLbv5ksfwK8HRnS83Y6KQkGpXBjnOYjdziYFAm0Aoea\n5mPTTGPSKHi3r5XHfkYokg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-z6xnp@playmate-e51a6.iam.gserviceaccount.com",
+  "client_id": "105874152139410633897",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-z6xnp%40playmate-e51a6.iam.gserviceaccount.com"
+}
