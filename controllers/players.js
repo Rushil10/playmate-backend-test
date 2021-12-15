@@ -137,7 +137,7 @@ export const addWebFcmToken = async (req, res) => {
   var playerId = req.player._id
   try {
     await player.findOneAndUpdate({ _id: playerId }, {
-      $addToSFet: {
+      $addToSet: {
         webFcmToken: req.body.fcmToken
       }
     })
