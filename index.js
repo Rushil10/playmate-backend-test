@@ -6,8 +6,7 @@ import testRoute from "./routes/test.js";
 import playerRoute from "./routes/players.js";
 import eventRoute from "./routes/events.js";
 import requestRoute from "./routes/requests.js";
-import playerAuth from "./util/playerAuth.js";
-import { createEvent } from "./controllers/events.js";
+import { eventStartNotify } from './cronJobs/eventStartNotification.js'
 
 const app = express();
 app.use(cors());
@@ -21,6 +20,8 @@ app.use("/booking", requestRoute);
 const CONNECTION_URL =
   "mongodb+srv://rushil:Playmate10$@cluster0.lcuyx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
+
+eventStartNotify.start()
 
 mongoose
   .connect(CONNECTION_URL, {
