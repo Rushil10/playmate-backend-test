@@ -18,6 +18,7 @@ export const eventStartNotify = cron.schedule("0 0 */1 * * *", async () => {
                 $gte: new Date(Date.now()),
                 $lte: new Date(tomm)
             },
+            eventStatus: "created"
         }
         var events = await event.find(options)
         var n = events.length;

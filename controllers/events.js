@@ -38,6 +38,7 @@ export const getEventsNearMe = async (req, res) => {
     rem_players: {
       $gt: 0,
     },
+    eventStatus: "created"
   };
   if (req.body.sport) {
     options.sport = req.body.sport;
@@ -78,6 +79,40 @@ export const getEventsNearMe = async (req, res) => {
       res.status(409).json({ message: error.message });
     });
 };
+
+export const cancelEvent = async (req, res) => {
+  var player = req.player;
+  var reason = req.body.reason;
+  var eventId = req.body.eventId;
+  var organiserId = req.body.organiserId;
+  const options = {
+    _id: eventId
+  }
+  if (player._id === organiserId) {
+    await event.findOneAndUpdate(options,
+      {
+        $set: {
+          eventStatus: "Cancelled",
+          cancellationReason: reason,
+          cancelledAt: new Date()
+        }
+      }
+    )
+    var message = {
+      message: "Event Cancelled",
+      eventId,
+      organiserId
+    }
+    res.status(200).json(message);
+  } else {
+    var message = {
+      message: "You are not authorised to cancel event.Only Event Organiser can cancel event.",
+      eventId,
+      organiserId
+    }
+    res.status(409).json(message);
+  }
+}
 
 export const getEventsOrganisedByMe = async (req, res) => {
   var id = req.player._id;
