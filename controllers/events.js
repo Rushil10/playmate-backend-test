@@ -82,14 +82,14 @@ export const getEventsNearMe = async (req, res) => {
 };
 
 export const cancelEvent = async (req, res) => {
-  var player = req.player;
+  var playerDetails = req.player;
   var reason = req.body.reason;
   var eventId = req.body.eventId;
   var organiserId = req.body.organiserId;
   const options = {
     _id: eventId
   }
-  if (player._id === organiserId) {
+  if (playerDetails._id === organiserId) {
     await event.findOneAndUpdate(options,
       {
         $set: {
