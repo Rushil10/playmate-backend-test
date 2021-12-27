@@ -108,7 +108,7 @@ export const cancelEvent = async (req, res) => {
       }
     }
     if (tokens.length > 0) {
-      var eventDetails = await event.findOneAndUpdate({ _id: eventId })
+      var eventDetails = await event.find({ _id: eventId })
       var notTitle = `${eventDetails[0].sport} event has been cancelled`
       var notBody = `Cancellation Reason : ${reason}`
       sendNotification(notTitle, notBody, tokens)
