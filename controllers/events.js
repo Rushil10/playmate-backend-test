@@ -102,7 +102,7 @@ export const cancelEvent = async (req, res) => {
     var requests = await request.find({ eventId: eventId, requestType: "Join Event" })
     var tokens = [];
     for (var i = 0; i < requests.length; i++) {
-      var players = await player.find({ _id: requests[i].players })
+      var players = await player.find({ _id: requests[i].playerId })
       if (players[0].webFcmToken.length > 0) {
         tokens = [...tokens, ...players[0].webFcmToken]
       }
