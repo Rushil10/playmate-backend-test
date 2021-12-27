@@ -6,14 +6,17 @@ var serverKey = require('../playmate-privatekey.json')
 var fcm = new FCM(serverKey);
 
 export const sendNotification = async (title, body, tokens) => {
+    var uniqueArray = tokens.filter(function (item, pos) {
+        return tokens.indexOf(item) == pos;
+    })
     var message = {
-        registration_ids: tokens,
+        registration_ids: uniqueArray,
         notification: {
             title: title,
             body: body
         },
     };
-    //console.log(message)
+    //console.log(message, "sendNotification")
     fcm.send(message, function (err, response) {
         if (err) {
             console.log("Something has gone wrong!", err);

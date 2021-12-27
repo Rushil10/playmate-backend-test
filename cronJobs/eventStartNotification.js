@@ -43,20 +43,20 @@ export const eventStartNotify = cron.schedule("0 0 */1 * * *", async () => {
                     }
                 }
                 if (allTokens.length > 0 && diff < 24) {
-                    var uniq = [...new Set(allTokens)];
-                    uniq.filter(String)
-                    console.log(uniq)
+                    //var uniq = [...new Set(allTokens)];
+                    //uniq.filter(String)
+                    //console.log(uniq)
                     var title = `${events[i].sport} event in ${diff} hours`
                     var message = `${events[i].sport} event is scheduled today, starting at ${moment(events[i].timings).format("h:mm a")} ${moment(events[i].day).format('dddd')}`
-                    sendNotification(title, message, uniq)
+                    sendNotification(title, message, allTokens)
                 }
                 if (allTokens.length > 0 && diff == 24) {
-                    var uniq = [...new Set(allTokens)];
-                    uniq.filter(String)
-                    console.log(uniq)
+                    //var uniq = [...new Set(allTokens)];
+                    //uniq.filter(String)
+                    //console.log(uniq)
                     var title = `${events[i].sport} event today`
                     var message = `${events[i].sport} event is scheduled today, starting at ${moment(events[i].timings).format("h:mm a")} ${moment(events[i].day).format('dddd')}`
-                    sendNotification(title, message, uniq)
+                    sendNotification(title, message, allTokens)
                 }
             }
         }
