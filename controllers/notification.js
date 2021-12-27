@@ -11,7 +11,7 @@ export const sendNotification = async (title, body, tokens) => {
     })
     var message = {
         registration_ids: uniqueArray,
-        notification: {
+        data: {
             title: title,
             body: body
         },

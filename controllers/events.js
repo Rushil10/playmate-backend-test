@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import event from "../models/event.js";
 import player from "../models/playerDetails.js";
 import request from "../models/request.js";
+import { sendNotification } from "./notification.js";
 var ObjectId = mongoose.Types.ObjectId;
 export const createEvent = async (req, res) => {
   const body = req.body;
@@ -98,6 +99,20 @@ export const cancelEvent = async (req, res) => {
         }
       }
     )
+    var requests = await request.find({ eventId: eventId, requestType: "Join Event" })
+    var tokens = [];
+    for (var i = 0; i < requests.length; i++) {
+      var players = await player.find({ _id: requests[i].players })
+      if (players[0].webFcmToken.length > 0) {
+        tokens = [...tokens, ...players[0].webFcmToken]
+      }
+    }
+    if (tokens.length > 0) {
+      var eventDetails = await event.findOneAndUpdate({ _id: eventId })
+      var notTitle = `${eventDetails[0].sport} event has been cancelled`
+      var notBody = `Cancellation Reason : ${reason}`
+      sendNotification(notTitle, notBody, tokens)
+    }
     var message = {
       message: "Event Cancelled",
       eventId,
